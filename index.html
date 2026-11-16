@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ашық сабақ · Физика · Дамир Ж.</title>
+<meta name="description" content="Физика пәнінен ашық сабақ: кристалдық және аморф денелер, деформация, Гук заңы, қаныққан бу, ауа ылғалдылығы, беттік керілу. Дайындаған оқушы — Дамир Ж.">
+<meta name="theme-color" content="#f3f8fb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav__in">
+    <a class="brand" href="#top" aria-label="Басына">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="3.4" fill="currentColor"/><ellipse cx="20" cy="20" rx="17" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><ellipse cx="20" cy="20" rx="17" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.8" transform="rotate(60 20 20)"/><ellipse cx="20" cy="20" rx="17" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.8" transform="rotate(-60 20 20)"/></svg>
+      <span>Ашық сабақ</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Мәзір" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="navLinks" aria-label="Бөлімдер">
+      <a href="#video">Бейнесабақ</a>
+      <a href="#plan">Сабақ барысы</a>
+      <a href="#theory">Тақырыптар</a>
+      <a href="#lab">Зертхана</a>
+      <a href="#quiz">Тест</a>
+      <a href="#problem">Проблемалық сұрақ</a>
+      <a href="#reflect">Рефлексия</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__text reveal">
+      <span class="chip"><i class="dot"></i> Физика пәнінен ашық сабақ</span>
+      <h1>Қатты денелер, сұйықтар және <em>ауа ылғалдылығы</em></h1>
+      <p class="lead">Кристалдан бастап шық тамшысына дейін: заттың құрылымы оның қасиеттерін қалай анықтайтынын бейнесабақ, интерактивті зертхана және тест арқылы зерттейміз.</p>
+      <div class="teacher">
+        <div class="teacher__ava" aria-hidden="true">ДЖ</div>
+        <div>
+          <div class="teacher__label">Жобаны дайындаған оқушы</div>
+          <div class="teacher__name">Дамир Ж.</div>
+        </div>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#video" data-play>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+          Бейнесабақты көру
+        </a>
+        <a class="btn btn--ghost" href="#quiz">Өзіңді тексер</a>
+      </div>
+    </div>
+
+    <a class="hero__card reveal" href="#video" data-play aria-label="Бейнесабақты ойнату">
+      <img src="assets/hero.jpg" alt="Бейнесабақтан кадр: кристалдық тор" width="854" height="480">
+      <span class="hero__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+      <span class="hero__dur">3:54</span>
+    </a>
+  </div>
+
+  <div class="wrap stats reveal">
+    <div class="stat"><b>3:54</b><span>бейнесабақ</span></div>
+    <div class="stat"><b>15</b><span>бейне бөлімі</span></div>
+    <div class="stat"><b>6</b><span>тақырып</span></div>
+    <div class="stat"><b>2</b><span>интерактивті зертхана</span></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section" id="video">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 · Бейнесабақ</span>
+      <h2>Сабақты бейнеден көріңіз</h2>
+      <p>Бөлімдердің бірін басып, бейненің кез келген сәтіне бірден өтуге болады.</p>
+    </div>
+
+    <div class="player reveal" id="player">
+      <div class="player__main">
+        <div class="player__frame">
+          <video id="lessonVideo" controls preload="metadata" playsinline poster="assets/poster.jpg">
+            <source src="assets/lesson.mp4" type="video/mp4">
+            Браузеріңіз бейнені қолдамайды. <a href="assets/lesson.mp4">Бейнені жүктеп алыңыз</a>.
+          </video>
+        </div>
+        <div class="chapbar" id="chapbar" aria-hidden="true"></div>
+        <div class="player__tools">
+          <div class="now">
+            <span class="now__label">Қазір:</span>
+            <span class="now__title" id="nowTitle">Кіріспе</span>
+          </div>
+          <div class="tools">
+            <div class="speed" role="group" aria-label="Жылдамдық">
+              <button data-speed="0.75">0.75×</button>
+              <button data-speed="1" class="on">1×</button>
+              <button data-speed="1.25">1.25×</button>
+              <button data-speed="1.5">1.5×</button>
+            </div>
+            <button class="iconbtn" id="wideBtn" title="Кең экран режимі" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7V4h4M21 7V4h-4M3 17v3h4M21 17v3h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <aside class="chapters" aria-label="Бейне бөлімдері">
+        <div class="chapters__head">Бөлімдер <span id="chapCount"></span></div>
+        <ol class="chapters__list" id="chapList"></ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section class="section section--alt" id="plan">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">02 · Сабақ барысы</span>
+      <h2>Мақсаттар мен кезеңдер</h2>
+    </div>
+
+    <div class="goals">
+      <article class="goal reveal">
+        <div class="goal__ico">🎯</div>
+        <h3>Білу</h3>
+        <p>Кристалдық және аморф денелердің айырмашылығын, деформация түрлерін, қаныққан бу мен ылғалдылық ұғымдарын білу.</p>
+      </article>
+      <article class="goal reveal">
+        <div class="goal__ico">🧮</div>
+        <h3>Қолдану</h3>
+        <p>Гук заңы бойынша серпімділік күшін есептеу, психрометр көрсеткіші арқылы салыстырмалы ылғалдылықты анықтау.</p>
+      </article>
+      <article class="goal reveal">
+        <div class="goal__ico">💡</div>
+        <h3>Талдау</h3>
+        <p>Күнделікті құбылыстарды (шық, булану, үйрек қауырсыны, ағаштың қисаюы) физика заңдарымен түсіндіру.</p>
+      </article>
+    </div>
+
+    <ol class="timeline">
+      <li class="reveal"><span class="tl__n">1</span><div><b>Ұйымдастыру кезеңі</b><p>Сәлемдесу, сабақтың мақсатымен таныстыру.</p></div><button class="tl__go" data-seek="16">0:16</button></li>
+      <li class="reveal"><span class="tl__n">2</span><div><b>Жаңа сабақ</b><p>Кристалдық және аморф денелер, деформация, Гук заңы.</p></div><button class="tl__go" data-seek="45">0:45</button></li>
+      <li class="reveal"><span class="tl__n">3</span><div><b>Тапсырма орындау</b><p>2-тапсырма: Гук заңына есеп.</p></div><button class="tl__go" data-seek="98">1:38</button></li>
+      <li class="reveal"><span class="tl__n">4</span><div><b>Бу және ылғалдылық</b><p>Қаныққан бу, ауа ылғалдылығы, шық нүктесі, булану — әр бөлімнен кейін сұрақ.</p></div><button class="tl__go" data-seek="115">1:55</button></li>
+      <li class="reveal"><span class="tl__n">5</span><div><b>Беттік керілу</b><p>Сулану құбылысы: неге үйрек суланбайды?</p></div><button class="tl__go" data-seek="186">3:06</button></li>
+      <li class="reveal"><span class="tl__n">6</span><div><b>Проблемалық сұрақ</b><p>Ағашты неге кептіреді? Барлық тақырыпты байланыстыру.</p></div><button class="tl__go" data-seek="220">3:40</button></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ THEORY ============ -->
+<section class="section" id="theory">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 · Тақырыптар</span>
+      <h2>Сабақтың негізгі ұғымдары</h2>
+      <p>Әр карточкадағы уақыт белгісін бассаңыз, бейне сол жерден басталады.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__top">
+          <svg class="card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <g stroke="var(--accent)" stroke-width="1.4" fill="none" opacity=".7">
+              <path d="M20 20h40v40H20zM40 10h40v40H40zM20 20l20-10M60 20l20-10M60 60l20-10M20 60l20-10"/>
+            </g>
+            <g fill="var(--accent)"><circle cx="20" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><circle cx="20" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="40" cy="10" r="4"/><circle cx="80" cy="10" r="4"/><circle cx="80" cy="50" r="4"/><circle cx="40" cy="50" r="4" opacity=".5"/></g>
+            <g fill="var(--warm)" opacity=".9"><circle cx="98" cy="30" r="3.5"/><circle cx="108" cy="44" r="3.5"/><circle cx="94" cy="56" r="3.5"/><circle cx="112" cy="64" r="3.5"/><circle cx="100" cy="70" r="3.5"/></g>
+          </svg>
+          <button class="seek" data-seek="45">▶ 0:45</button>
+        </div>
+        <h3>Кристалдық және аморф денелер</h3>
+        <div class="split">
+          <div>
+            <h4>Кристалдық</h4>
+            <ul><li>Бөлшектері реттелген кристалдық тор түзеді</li><li>Балқу температурасы тұрақты</li><li>Анизотропты</li></ul>
+            <p class="ex">ас тұзы, алмаз, мұз, металдар</p>
+          </div>
+          <div>
+            <h4>Аморф</h4>
+            <ul><li>Бөлшектері ретсіз орналасқан</li><li>Белгілі балқу температурасы жоқ, біртіндеп жұмсарады</li><li>Изотропты</li></ul>
+            <p class="ex">шыны, пластмасса, шайыр</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__top">
+          <svg class="card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <g fill="none" stroke="var(--accent)" stroke-width="1.6">
+              <rect x="6" y="14" width="34" height="14" rx="3"/><path d="M2 21h-0M44 21h8M0 21h4" stroke-linecap="round"/>
+              <rect x="70" y="14" width="24" height="14" rx="3"/><path d="M60 21h8M104 21h-8" stroke-linecap="round"/>
+              <path d="M8 62q22-18 44 0" /><path d="M78 46v26M90 46v26M78 50c4 3 8 3 12 0M78 60c4 3 8 3 12 0"/>
+            </g>
+          </svg>
+          <button class="seek" data-seek="64">▶ 1:04</button>
+        </div>
+        <h3>Деформация түрлері</h3>
+        <p>Сыртқы күш әсерінен дененің пішіні немесе көлемі өзгеруі. Күш алынғанда дене бастапқы пішініне қайтса — <b>серпімді</b>, қайтпаса — <b>пластикалық</b> деформация.</p>
+        <div class="tags"><span>Созылу</span><span>Сығылу</span><span>Ию</span><span>Бұралу</span><span>Ығысу</span></div>
+      </article>
+
+      <article class="card card--formula reveal">
+        <div class="card__top">
+          <div class="formula">F<sub>серп</sub> = −kx</div>
+          <button class="seek" data-seek="71">▶ 1:11</button>
+        </div>
+        <h3>Гук заңы</h3>
+        <p>Серпімді деформация кезінде серпімділік күші дененің ұзаруына тура пропорционал және деформацияға қарсы бағытталған.</p>
+        <dl class="vars"><div><dt>k</dt><dd>қатаңдық, Н/м</dd></div><div><dt>x</dt><dd>абсолюттік ұзару, м</dd></div><div><dt>«−»</dt><dd>күш ығысуға қарсы</dd></div></dl>
+        <a class="link" href="#lab">Зертханада тексеріп көру →</a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__top">
+          <svg class="card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <rect x="20" y="8" width="80" height="66" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
+            <rect x="21" y="52" width="78" height="21" rx="4" fill="var(--accent)" opacity=".25"/>
+            <g fill="var(--accent)"><circle cx="40" cy="30" r="3"/><circle cx="62" cy="22" r="3"/><circle cx="80" cy="36" r="3"/><circle cx="52" cy="42" r="3"/></g>
+            <path d="M46 52v-8m0 0-3 3m3-3 3 3M70 36v8m0 0-3-3m3 3 3-3" stroke="var(--warm)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <button class="seek" data-seek="115">▶ 1:55</button>
+        </div>
+        <h3>Қаныққан бу</h3>
+        <p>Өз сұйығымен <b>динамикалық тепе-теңдікте</b> тұрған бу: уақыт бірлігінде сұйықтан ұшып шыққан молекулалар саны қайта оралғандар санына тең. Қаныққан бу қысымы көлемге тәуелсіз, тек температураға тәуелді.</p>
+      </article>
+
+      <article class="card card--formula reveal">
+        <div class="card__top">
+          <div class="formula">φ = <span class="frac"><span>ρ</span><span>ρ<sub>0</sub></span></span> · 100%</div>
+          <button class="seek" data-seek="129">▶ 2:09</button>
+        </div>
+        <h3>Ауа ылғалдылығы</h3>
+        <p><b>Абсолюттік</b> ылғалдылық ρ — 1 м³ ауадағы су буының массасы (г/м³). <b>Салыстырмалы</b> ылғалдылық φ — су буы тығыздығының сол температурадағы қаныққан бу тығыздығына қатынасы.</p>
+        <p class="note">Адамға қолайлы ылғалдылық: 40–60%.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__top">
+          <svg class="card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <path d="M14 48c10-2 18 2 26 0s16-4 26 0 18 2 26 0 14-2 18 0" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
+            <path d="M38 40c0-8 6-14 6-14s6 6 6 14a6 6 0 0 1-12 0z" fill="var(--accent)" opacity=".85"/>
+            <path d="M74 42c0-6 4-10 4-10s4 4 4 10a4 4 0 0 1-8 0z" fill="var(--accent)" opacity=".55"/>
+            <path d="M58 20v-10M64 24l6-8M52 24l-6-8" stroke="var(--warm)" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
+          </svg>
+          <button class="seek" data-seek="148">▶ 2:28</button>
+        </div>
+        <h3>Шық нүктесі және булану</h3>
+        <p><b>Шық нүктесі</b> — ауадағы су буы қаныққан күйге жететін температура. Суық әйнекке үрлегенде оның бетінде тамшылар пайда болады.</p>
+        <p><b>Булану</b> жылдамдығы температураға, бет ауданына, желге және сұйықтың тегіне тәуелді. Буланғанда сұйық суиды.</p>
+      </article>
+
+      <article class="card card--formula reveal">
+        <div class="card__top">
+          <div class="formula">σ = <span class="frac"><span>F</span><span>l</span></span></div>
+          <button class="seek" data-seek="186">▶ 3:06</button>
+        </div>
+        <h3>Беттік керілу және сулану</h3>
+        <p>Сұйық беті созылған серпімді жарғақ сияқты — ол ауданын кішірейтуге ұмтылады. Сондықтан тамшы шар пішінді.</p>
+        <p>Үйрек қауырсыны майлы қабатпен қапталған: су оны <b>суландырмайды</b>, тамшы болып домалап кетеді.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__top">
+          <svg class="card__art" viewBox="0 0 120 80" aria-hidden="true">
+            <g fill="none" stroke="var(--accent)" stroke-width="1.6"><rect x="34" y="6" width="14" height="56" rx="7"/><rect x="70" y="6" width="14" height="56" rx="7"/></g>
+            <circle cx="41" cy="66" r="9" fill="var(--warm)"/><rect x="38" y="26" width="6" height="40" rx="3" fill="var(--warm)"/>
+            <circle cx="77" cy="66" r="9" fill="var(--accent)"/><rect x="74" y="34" width="6" height="32" rx="3" fill="var(--accent)"/>
+            <path d="M88 70c6 0 10-2 14-6" stroke="var(--accent)" stroke-width="1.4" fill="none" stroke-dasharray="2 3"/>
+          </svg>
+          <button class="seek" data-seek="213">▶ 3:33</button>
+        </div>
+        <h3>Психрометр</h3>
+        <p>Екі термометрден тұрады: <b>құрғақ</b> және <b>ылғал</b>. Ылғал термометрдегі су буланып, оны салқындатады. Көрсеткіштер айырмасы неғұрлым үлкен болса, ауа соғұрлым құрғақ.</p>
+        <a class="link" href="#psy">Психрометрді өзің қолданып көр →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAB ============ -->
+<section class="section section--alt" id="lab">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">04 · Интерактивті зертхана</span>
+      <h2>Өзің тәжірибе жаса</h2>
+      <p>Жүгірткілерді жылжытып, шамалардың бір-біріне қалай тәуелді екенін бақыла.</p>
+    </div>
+
+    <div class="labs">
+      <!-- Hooke -->
+      <article class="lab reveal" id="hooke">
+        <header class="lab__head"><h3>Гук заңы</h3><span class="pill">F = −kx</span></header>
+        <div class="lab__body">
+          <div class="spring-stage">
+            <svg id="springSvg" viewBox="0 0 160 380" role="img" aria-label="Серіппеге ілінген жүк">
+              <rect x="20" y="6" width="120" height="10" rx="3" fill="var(--line-strong)"/>
+              <g stroke="var(--muted)" stroke-width="1" opacity=".5">
+                <line x1="140" y1="76" x2="140" y2="316"/>
+              </g>
+              <text x="146" y="70" font-size="9" fill="var(--muted)" text-anchor="end">x, см</text>
+              <g id="ruler"></g>
+              <polyline id="springPath" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+              <g id="weight">
+                <line x1="110" y1="0" x2="140" y2="0" stroke="var(--warm)" stroke-width="2"/>
+                <rect x="50" y="0" width="60" height="44" rx="8" fill="var(--warm)"/>
+                <text id="weightLabel" x="80" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1205">0 кг</text>
+              </g>
+            </svg>
+          </div>
+          <div class="lab__controls">
+            <label class="range">
+              <span>Қатаңдық <b>k</b> <output id="kOut">200 Н/м</output></span>
+              <input type="range" id="kIn" min="50" max="500" step="10" value="200">
+            </label>
+            <label class="range">
+              <span>Жүк массасы <b>m</b> <output id="mOut">1,0 кг</output></span>
+              <input type="range" id="mIn" min="0" max="3" step="0.1" value="1">
+            </label>
+            <div class="readout">
+              <div><span>Ауырлық күші F = mg</span><b id="fOut">9,8 Н</b></div>
+              <div><span>Ұзару x = F / k</span><b id="xOut">4,9 см</b></div>
+            </div>
+            <canvas id="hookeChart" width="420" height="180" aria-label="F(x) графигі"></canvas>
+            <p class="lab__warn" id="hookeWarn" hidden>⚠ Серпімділік шегінен асты: деформация пластикалық болуы мүмкін, Гук заңы орындалмайды!</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Psychrometer -->
+      <article class="lab reveal" id="psy">
+        <header class="lab__head"><h3>Психрометр</h3><span class="pill">φ, %</span></header>
+        <div class="lab__body">
+          <div class="psy-stage">
+            <div class="thermo">
+              <div class="thermo__tube"><div class="thermo__fill thermo__fill--dry" id="dryFill"></div></div>
+              <div class="thermo__bulb thermo__bulb--dry"></div>
+              <div class="thermo__val" id="dryVal">21 °C</div>
+              <div class="thermo__name">құрғақ</div>
+            </div>
+            <div class="thermo">
+              <div class="thermo__tube"><div class="thermo__fill thermo__fill--wet" id="wetFill"></div></div>
+              <div class="thermo__bulb thermo__bulb--wet"></div>
+              <div class="thermo__val" id="wetVal">16 °C</div>
+              <div class="thermo__name">ылғал</div>
+            </div>
+            <div class="gauge">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="var(--line)" stroke-width="10"/>
+                <circle id="gaugeArc" cx="60" cy="60" r="50" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
+              </svg>
+              <div class="gauge__txt"><b id="rhOut">60%</b><span id="rhNote">қолайлы</span></div>
+            </div>
+          </div>
+          <div class="lab__controls">
+            <label class="range">
+              <span>Құрғақ термометр <output id="tOut">21 °C</output></span>
+              <input type="range" id="tIn" min="0" max="35" step="1" value="21">
+            </label>
+            <label class="range">
+              <span>Көрсеткіштер айырмасы Δt <output id="dOut">5 °C</output></span>
+              <input type="range" id="dIn" min="0" max="12" step="0.5" value="5">
+            </label>
+            <div class="readout">
+              <div><span>Салыстырмалы ылғалдылық</span><b id="rhOut2">60%</b></div>
+              <div><span>Шық нүктесі</span><b id="dewOut">13 °C</b></div>
+              <div><span>Абсолюттік ылғалдылық</span><b id="absOut">11 г/м³</b></div>
+            </div>
+            <p class="hint">Бейнедегі мысал: құрғақ 21 °C, ылғал 16 °C. Δt = 0 болса — ауа толық қаныққан (φ = 100%).</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="section" id="quiz">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">05 · Тест</span>
+      <h2>Өзіңді тексер</h2>
+      <p>6 сұрақ. Жауапты таңдасаң, бірден түсіндірмесін көресің.</p>
+    </div>
+    <div class="quiz reveal" id="quizBox">
+      <div class="quiz__top">
+        <div class="quiz__progress"><div id="quizBar"></div></div>
+        <span class="quiz__count" id="quizCount">1 / 6</span>
+      </div>
+      <div id="quizStage"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section section--alt" id="problem">
+  <div class="wrap wrap--narrow">
+    <div class="problem reveal">
+      <div class="problem__media">
+        <img src="assets/ch/c229.jpg" alt="Ағаш тақтайлар қоймасы" loading="lazy">
+        <button class="seek seek--float" data-seek="220">▶ 3:40</button>
+      </div>
+      <div class="problem__body">
+        <span class="eyebrow">06 · Проблемалық сұрақ</span>
+        <h2>Ағаш тақтайларды неге кептіреді?</h2>
+        <p>Жаңа кесілген ағаштан жасалған еден немесе есік біраз уақыттан кейін қисайып, жарылып кетеді. Неліктен? Бұл құбылысқа сабақтағы қандай ұғымдар қатысты?</p>
+        <details class="answer">
+          <summary>Өз ойыңды айтқаннан кейін жауапты аш</summary>
+          <div>
+            <p>Ағаш — кеуекті материал, ол ауадан ылғалды сіңіреді және бөледі. Ылғал <b>буланған</b> кезде талшықтар біркелкі емес кішірейеді: ішінде кернеу пайда болып, тақтай <b>ию</b> және <b>бұралу деформациясына</b> ұшырайды.</p>
+            <p>Сондықтан ағашты алдын ала кептіреді: ылғалдылығы мен температурасы бақыланатын камераларда (психрометр, гигрометр көмегімен) біртіндеп құрғатады. Сонда бұйым пішінін сақтайды.</p>
+            <div class="tags"><span>Булану</span><span>Ауа ылғалдылығы</span><span>Деформация</span></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFLECTION ============ -->
+<section class="section" id="reflect">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">07 · Рефлексия</span>
+      <h2>«Бағдаршам»: сабақ саған қалай болды?</h2>
+    </div>
+    <div class="traffic reveal" role="radiogroup" aria-label="Өзіңді бағала">
+      <button class="light light--g" data-mood="g" role="radio" aria-checked="false"><i></i><b>Бәрі түсінікті</b><span>Басқаға түсіндіре аламын</span></button>
+      <button class="light light--y" data-mood="y" role="radio" aria-checked="false"><i></i><b>Сұрақтарым бар</b><span>Кейбір тұстарын қайталау керек</span></button>
+      <button class="light light--r" data-mood="r" role="radio" aria-checked="false"><i></i><b>Қиын болды</b><span>Көмек қажет</span></button>
+    </div>
+    <div class="reflect-note reveal">
+      <label for="reflectText">Бүгін мен не білдім? (бір сөйлем)</label>
+      <textarea id="reflectText" rows="3" placeholder="Мысалы: Шық нүктесі деген…"></textarea>
+      <p class="reflect-saved" id="reflectSaved" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><b>Ашық сабақ · Физика</b><span>Дайындаған оқушы: Дамир Ж.</span></div>
+    <a href="#top" class="btn btn--ghost btn--sm">Жоғары ↑</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
